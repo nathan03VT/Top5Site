@@ -5,3 +5,4 @@ Ethan Bourne (ethanbourne25)
 
 The program lacks styling and does not support multiple lists.
 Good start to the program but seems like a good template to add more to.
+It lacks complexity and creativity.
