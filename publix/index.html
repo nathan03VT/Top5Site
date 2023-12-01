@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Site</title>
+</head>
+<body>
+    <h1>Top 5 Site</h1>
+    <form action="http://localhost:3000/addTop5" method="post">
+        <label for="top5">Enter your Top 5:</label>
+        <input type="text" id="top5" name="top5" required>
+        <button type="submit">Add Top 5</button>
+    </form>
+    <h2>Your Top 5s:</h2>
+    <ul id="top5List"></ul>
+
+    <script>
+        async function fetchTop5s() {
+            const response = await fetch('http://localhost:3000/getTop5s');
+            const top5s = await response.json();
+            const top5List = document.getElementById('top5List');
+
+            // Display only the latest 5 elements
+            top5List.innerHTML = top5s.slice(-5).map(top5 => `<li>${top5}</li>`).join('');
+        }
+
+        setInterval(fetchTop5s, 1000); // Update the list every second
+    </script>
+</body>
+</html>
