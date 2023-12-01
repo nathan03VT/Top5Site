@@ -1,0 +1,6 @@
+Brandon Hoang (brandonh03)
+Connor Graves (cwgraves)
+Maya Makked (mayam22)
+Ethan Bourne (ethanbourne25)
+
+The program lacks styling and does not support multiple lists.
