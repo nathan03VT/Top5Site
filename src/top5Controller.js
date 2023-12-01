@@ -1,7 +1,7 @@
 let userTop5s = [];
 
 function getIndexPage(req, res) {
-    res.sendFile(__dirname + '/../public/index.html');
+    res.sendFile(__dirname + '/../publix/index.html');
 }
 
 function addTop5(req, res) {
